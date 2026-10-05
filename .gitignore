@@ -1,0 +1,79 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env.production
+.env*.local
+
+# runtime / secrets
+.venv-rembg/
+*.zip
+*.bak
+platform/*.json
+!platform/*.example.json
+database/integrations.json
+database/analytics/
+database/whatsapp-pending.json
+database/whatsapp-undo.json
+database/whatsapp-sticker-state.json
+tenants/**/analytics/
+tenants/**/whatsapp-pending.json
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+database/whatsapp-ocr/
+
+# graphify
+/graphify-out/
+
+# runtime admin config (contiene sessionToken/codice cifrato)
+database/admin-config.json
+tenants/**/admin-config.json
+
+# stato runtime multi-tenant (equivalente ai pattern già sopra per database/)
+tenants/**/whatsapp-undo.json
+tenants/**/ai-usage.json
+platform/ai-usage/
+database/ai-usage.json
+
+# blog: articoli e bozze generati a runtime, non codice
+platform/blog/
+
+# coda job generazione modelli 3D (runtime, non codice)
+platform/3d-jobs.json
+
+# collage icone categoria per WhatsApp, generato e cachato a runtime
+platform/whatsapp/
+
+# credenziali admin runtime
+**/admin-config.json
+!tenants/_template/admin-config.json

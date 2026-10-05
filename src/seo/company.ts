@@ -1,0 +1,25 @@
+export const COMPANY = {
+  productName: 'Menu col codice',
+  legalName: 'Codewaru di Giuseppe Marzullo',
+  tradeName: 'Codewaru',
+  vatId: 'IT06441120653',
+  street: 'Spiazzo Consalvo 2',
+  postalCode: '84096',
+  city: 'Montecorvino Rovella',
+  province: 'SA',
+  seat: 'Spiazzo Consalvo 2, 84096 Montecorvino Rovella (SA)',
+  email: 'info@menucolcodice.it',
+  website: 'https://menucolcodice.it',
+  tradeSite: 'https://codewaru.it',
+  dpoName: 'Giuseppe Marzullo',
+  whatsappNational: '3330000004',
+  whatsappE164: '393330000004',
+  whatsappDisplay: '+39 379 396 4610',
+  court: 'Salerno',
+  hosting: 'IONOS',
+  lastUpdated: '18 agosto 2026',
+  logRetentionDays: 15,
+  unpaidKeepDays: 30,
+} as const;
+
+export const COMPANY_WHATSAPP_URL = `https://wa.me/${COMPANY.whatsappE164}`;

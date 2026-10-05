@@ -1,0 +1,11 @@
+{
+  "clientId": "",
+  "secret": "",
+  "mode": "sandbox",
+  "webhookId": "",
+  "productId": "",
+  "planIds": {
+    "medium": "",
+    "pro": ""
+  }
+}

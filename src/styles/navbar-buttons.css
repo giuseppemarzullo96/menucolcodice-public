@@ -1,0 +1,12 @@
+/* Forza i colori dei bottoni della navbar per sovrascrivere qualsiasi altro stile */
+
+.navbar-button.ant-btn-default {
+  background: var(--navbar-button-bg) !important;
+  border-color: var(--navbar-button-bg) !important;
+  color: var(--navbar-button-text) !important;
+}
+
+.navbar-button.ant-btn-default:hover {
+  background: var(--navbar-button-hover) !important;
+  border-color: var(--navbar-button-hover) !important;
+}

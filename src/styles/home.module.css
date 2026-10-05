@@ -1,0 +1,324 @@
+.mainContainer {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* La navbar sopra è alta 64px fissi: l'hero punta a stare, insieme a lei,
+   dentro alla prima schermata invece di occupare da solo 100dvh. */
+.heroSection {
+  color: hsla(0, 0%, 100%, 0.96);
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.img,
+.video,
+.colorBackground {
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.img,
+.video {
+  filter: brightness(0.42) saturate(0.92);
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(12, 9, 6, 0.55) 0%, rgba(12, 9, 6, 0.18) 38%, rgba(12, 9, 6, 0.62) 100%);
+}
+
+.homeOverlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+  padding: 0.75rem 1.1rem 0.85rem;
+  box-sizing: border-box;
+}
+
+.restaurantInformation {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+  color: rgba(255, 248, 236, 0.82);
+}
+
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.infoRow svg {
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.hoursBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0.5rem 0 0.3rem;
+}
+
+.title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: clamp(1.6rem, 7.5vw, 2.4rem) !important;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.heroRule {
+  width: 2.2rem;
+  height: 1.5px;
+  background: #d4b56a;
+  opacity: 0.9;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: clamp(0.75rem, 2.8vw, 0.9rem);
+  line-height: 1.35;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  max-width: 24rem;
+  opacity: 0.92;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.15rem 0 0;
+  margin-top: 0.15rem;
+}
+
+.socialIcon {
+  color: inherit;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.callButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+  border: 1px solid rgba(255, 248, 236, 0.4);
+  background: rgba(255, 248, 236, 0.12);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Piatti in evidenza: fuori dalla foto hero, su sfondo pagina normale */
+.featuredSection {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.9rem 1.1rem 0.1rem;
+  box-sizing: border-box;
+}
+
+.featuredTitle {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0;
+  color: #1a1a17;
+}
+
+.featuredSubtitle {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 0.68rem;
+  margin: 0.1rem 0 0.55rem;
+  color: #8a6a2e;
+}
+
+.featuredGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featuredCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 6.5rem;
+  min-width: 5.6rem;
+  max-width: 7.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(26, 26, 23, 0.07);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.featuredImageWrap {
+  aspect-ratio: 1 / 1;
+  background: #f1eadc;
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featuredName {
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.35rem 0.4rem 0;
+  color: #1a1a17;
+}
+
+.featuredPrice {
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem 0.4rem;
+}
+
+.ctaWrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1.1rem 1rem;
+  box-sizing: border-box;
+}
+
+.ctaFull {
+  height: auto !important;
+  width: 100%;
+  display: block !important;
+  padding: 0.75rem 1.2rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.11em !important;
+  line-height: 1.2 !important;
+  text-align: center;
+  border: none !important;
+  border-radius: 14px !important;
+}
+
+@media (min-width: 640px) {
+  .homeOverlay {
+    padding: 1rem 1.6rem 1.1rem;
+  }
+
+  .restaurantInformation {
+    font-size: 0.82rem;
+  }
+
+  .title {
+    font-size: clamp(2.1rem, 5.5vw, 3rem) !important;
+  }
+
+  .featuredGrid {
+    gap: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .restaurantInformation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .informationContainer {
+    max-width: 48%;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 767px) {
+  .heroSection {
+    min-height: 40vh;
+  }
+
+  .title {
+    font-size: 1.4rem !important;
+  }
+
+  .subtitle {
+    font-size: 0.72rem;
+  }
+}
+
+/* Schermi molto bassi (telefono in orizzontale, o barre browser espanse):
+   comprime ulteriormente per restare in una sola schermata. */
+@media (max-height: 560px) {
+  .heroSection {
+    min-height: 34vh;
+  }
+
+  .restaurantInformation {
+    display: none;
+  }
+
+  .hero {
+    gap: 0.35rem;
+  }
+}

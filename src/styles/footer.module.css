@@ -1,0 +1,36 @@
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 !important;
+  padding: 1.15rem 1rem !important;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.footerLegal {
+  font-size: 0.78rem;
+}
+
+.footerLegal a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.footerLink div {
+  margin-bottom: 0;
+}
+
+.footerLink div:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}

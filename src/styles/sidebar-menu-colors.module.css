@@ -1,0 +1,49 @@
+/* Colori dinamici per il menu sidebar */
+
+.menuContainer,
+.menuContainer :global(.ant-menu-light),
+.menuContainer :global(.ant-menu-light) > :global(.ant-menu),
+.menuContainer :global(.ant-menu-root),
+.menuContainer :global(.ant-menu-root.ant-menu-light),
+.menuContainer :global(.ant-menu-root.ant-menu-light) > :global(.ant-menu),
+.menuContainer :global(.ant-menu-inline),
+.menuContainer :global(.ant-menu-inline.ant-menu-root) {
+  color: var(--menu-item-color, rgba(255, 255, 255, 0.85)) !important;
+  background: var(--menu-item-background, #401b0e) !important;
+  background-color: var(--menu-item-background, #401b0e) !important;
+}
+
+.menuContainer :global(.ant-menu-item) {
+  color: var(--menu-item-color, #ffffff) !important;
+}
+
+.menuContainer :global(.ant-menu-item:hover) {
+  color: var(--menu-item-hover, #FFE5B4) !important;
+  background-color: transparent !important;
+}
+
+.menuContainer :global(.ant-menu-item-selected) {
+  color: var(--menu-item-active, #FFB800) !important;
+  background-color: transparent !important;
+}
+
+.menuContainer :global(.ant-menu-item-selected::after) {
+  border-right-color: var(--menu-item-active, #FFB800) !important;
+}
+
+.menuContainer :global(.ant-menu-item-icon) {
+  color: var(--icon-color, #FFB800) !important;
+  font-size: 16px !important;
+  width: 18px !important;
+  min-width: 18px !important;
+  margin-inline-end: 10px !important;
+}
+
+.menuContainer :global(.ant-menu-item-icon svg) {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.menuContainer :global(.ant-menu-item-selected .ant-menu-item-icon) {
+  color: var(--menu-item-active, #FFB800) !important;
+}

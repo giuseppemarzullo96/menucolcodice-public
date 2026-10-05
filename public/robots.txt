@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /adminnewpage
+Disallow: /api
+Disallow: /iscriviti/ok
+Disallow: /qr
+
+Sitemap: https://menucolcodice.it/sitemap.xml

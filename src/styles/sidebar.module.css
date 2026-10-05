@@ -1,0 +1,81 @@
+.sidebarWrapper {
+  display: none !important; /* Mobile: sempre nascosta */
+}
+
+@media (min-width: 1024px) {
+  .sidebarWrapper {
+    display: block !important; /* Desktop: sempre visibile */
+    position: fixed !important;
+    top: 80px;
+    left: max(20px, calc((100vw - 1180px) / 2));
+    z-index: 1;
+    margin-right: 40px;
+    /* Animazione smooth per l'apparizione */
+    animation: sidebarFadeIn 0.4s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+
+/* Animazione per l'apparizione della sidebar */
+@keyframes sidebarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebarMenuContainer {
+  border-radius: 18px;
+  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  animation: menuContentFadeIn 0.5s ease-out 0.1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Animazione per il contenuto del menu (leggermente ritardata) */
+@keyframes menuContentFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Assicura che il contenuto interno della sidebar non si estenda troppo */
+.sidebarMenuContainer :global(.ant-layout-sider-children) {
+  height: auto;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  /* Safari fix: scroll fluido */
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebarTitle {
+  text-align: center;
+}
+
+.sidebarTitle :global(.ant-typography) {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+.menuContainer {
+  border: 0px !important;
+  border-radius: 12px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}

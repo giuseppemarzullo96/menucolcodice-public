@@ -1,0 +1,14 @@
+/* Menu col codice — variabili colore */
+:root {
+  --mcc-inchiostro:        #1A1A17;  /* base, testo, sfondi scuri */
+  --mcc-inchiostro-soft:   #2E2E29;  /* superfici scure secondarie */
+  --mcc-senape:            #E0A32E;  /* accento */
+  --mcc-senape-scuro:      #B0770F;  /* bordi, icone, testo grande su chiaro (3.6:1) */
+  --mcc-senape-testo:      #96640B;  /* testo e link su fondo chiaro (4.8:1 — AA) */
+  --mcc-senape-chiaro:     #F2D08A;  /* accento su fondo scuro, bordi */
+  --mcc-crema:             #FAF7F0;  /* sfondo pagina */
+  --mcc-crema-scuro:       #EFE9DC;  /* bordi, separatori, superfici */
+  --mcc-bianco:            #FFFFFF;
+  --mcc-testo:             #1A1A17;
+  --mcc-testo-soft:        #5C5A52;  /* testo secondario, 6.5:1 su crema */
+}

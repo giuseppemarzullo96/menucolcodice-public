@@ -1,0 +1,129 @@
+.cardWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.media {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+  background: rgba(28, 22, 16, 0.06);
+}
+
+.mediaSquare {
+  height: 0 !important;
+  padding-bottom: 100%;
+  flex: 0 0 auto;
+  align-self: stretch;
+}
+
+.mediaSquare > .image,
+.mediaSquare > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card :global(.ant-card-body) {
+  position: relative;
+  z-index: 1;
+  padding: 0 !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestSellerTag {
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  line-height: 1.3;
+  padding: 3px 9px;
+  margin-bottom: 0.35rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bodyCard h3 {
+  margin: 0 0 0.25rem !important;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.28rem !important;
+  line-height: 1.2;
+}
+
+.bodyCard .pricesContainer {
+  margin: 0;
+}
+
+.bodyCard .pricesContainer div {
+  margin: 0;
+}
+
+.bodyCard .pricesContainer :global(.ant-typography) {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+.bodyCard .pricesContainer :global(.ant-typography span) {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+}
+
+.bodyCard .ingredients {
+  font-size: 0.84rem;
+  margin: 0 0 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.bodyCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem 0.95rem 1rem;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.detailsButton {
+  margin: 0 !important;
+  border-radius: 999px !important;
+  height: 34px !important;
+  width: 34px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

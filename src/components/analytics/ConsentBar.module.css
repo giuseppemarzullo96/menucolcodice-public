@@ -1,0 +1,52 @@
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  background: #1a1a17;
+  color: #faf7f0;
+  padding: 0.9rem 1rem 1.05rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bar p {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #efe9dc;
+}
+
+.bar a {
+  color: #f2d08a;
+}
+
+.actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.actions button {
+  border: 0;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.55rem 0.9rem;
+}
+
+.accept {
+  background: #e0a32e;
+  color: #1a1a17;
+}
+
+.reject {
+  background: transparent;
+  color: #faf7f0;
+  border: 1px solid #5c5a52 !important;
+}

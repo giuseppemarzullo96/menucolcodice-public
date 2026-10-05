@@ -1,0 +1,96 @@
+/* Navbar fixed su mobile quando si scrolla */
+@media (max-width: 1023px) {
+  .headerFixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    z-index: 1000;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 64px !important;
+  line-height: 64px !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navContainerOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.navContainerOptions :global(.ant-typography) {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-size: 1.28rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: min(58vw, 280px);
+}
+
+.logoImage {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: min(200px, 52vw);
+  object-fit: contain;
+  object-position: left center;
+}
+
+.logoFallback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.headerButtonsContainer {
+  display: none;
+}
+
+.menuIcon :global(.ant-btn) {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (min-width: 1024px) {
+  .headerButtonsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  .navContainerOptions :global(.ant-typography) {
+    font-size: 1.55rem !important;
+    max-width: none;
+  }
+}

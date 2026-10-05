@@ -1,0 +1,14 @@
+.layoutContainer {
+  padding: 0.35rem 0 2rem;
+  min-height: calc(100vh - 134px) !important;
+}
+
+@media (min-width: 1024px) {
+  .layoutContainer {
+    padding-top: 1.4rem;
+  }
+
+  .layoutContainer > :last-child {
+    padding-left: 290px;
+  }
+}

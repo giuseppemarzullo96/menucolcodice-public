@@ -1,0 +1,21 @@
+html.admin-app,
+html.admin-app body {
+  background: #faf7f0 !important;
+  color-scheme: light;
+}
+
+/* Solo sul menu del locale. L’admin ha i suoi colori e non deve ereditare lo sfondo scuro. */
+
+html:not(.admin-app) .ant-layout-sider,
+html:not(.admin-app) .ant-layout-sider-light {
+  background: var(--sidebar-bg, #ffffff) !important;
+}
+
+html:not(.admin-app) .ant-layout,
+html:not(.admin-app) .ant-layout-content {
+  background: var(--layout-bg, #000000) !important;
+}
+
+html:not(.admin-app) .ant-card {
+  background: var(--card-background-color, #1a1a1a) !important;
+}

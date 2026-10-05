@@ -1,0 +1,13 @@
+export { GeneralTab } from './GeneralTab';
+export { MenuTab } from './MenuTab';
+export { CategoriesTab } from './CategoriesTab';
+export { ScanMenuTab } from './ScanMenuTab';
+export { WhatsAppTab } from './WhatsAppTab';
+export { SecurityTab } from './SecurityTab';
+export { GraficaTab } from './GraficaTab';
+export { PlatformTab } from './PlatformTab';
+export { OverviewTab, SignupsTab } from './OverviewTab';
+export { SubscriptionTab, CancelSubscriptionButton } from './SubscriptionTab';
+export { PromoCodesTab } from './PromoCodesTab';
+export { AnalyticsTab } from './AnalyticsTab';
+export { QrTab } from './QrTab';

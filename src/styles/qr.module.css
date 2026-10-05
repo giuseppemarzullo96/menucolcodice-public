@@ -1,0 +1,46 @@
+.container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-background, #000000);
+}
+
+.card {
+  max-width: 600px;
+  width: 100%;
+  background: var(--color-card-bg, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.qrWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .qrWrapper {
+    padding: 1rem;
+  }
+
+  .qrWrapper svg {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}

@@ -1,0 +1,90 @@
+/* File CSS unico per tutti i colori dinamici del tema */
+
+/* Variabili CSS per i colori - verranno impostate dinamicamente via JavaScript */
+.cardWrapper {
+  --best-seller-color: #fcbe00;
+  --details-button-bg: #303030;
+  --details-button-icon: #ffffff;
+  --product-name-color: #ffffff;
+  --price-color: #cc1f00;
+  --ingredients-color: #d9d9d9;
+  --details-ingredients-color: #d9d9d9;
+  --subtitle-color: #ffffff;
+  --description-text-color: #d9d9d9;
+  --shadow-color: #000000;
+  --shadow-opacity: 0.1;
+  --hover-shadow-opacity: 0.15;
+  --card-border-radius: 12px;
+}
+
+/* Tag Best Seller - sopra il nome prodotto, larghezza solo per il testo */
+.bestSellerTag {
+  align-self: flex-start !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  line-height: 1.3 !important;
+  padding: 3px 9px !important;
+  margin-bottom: 0.45rem !important;
+  background-color: var(--best-seller-color, #fcbe00) !important;
+  border-color: var(--best-seller-color, #fcbe00) !important;
+  /* Non più bianco fisso: con brand chiari (panna, crema, giallo — tutti nomi
+     colore validi) il testo bianco spariva nel badge. */
+  color: var(--best-seller-text-color, #fff) !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-radius: 999px !important;
+}
+
+/* Pulsante Dettagli */
+.detailsButton {
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: var(--details-button-bg, #303030) !important;
+  border-color: var(--details-button-bg, #303030) !important;
+  border-radius: 999px !important;
+}
+
+.detailsButton svg {
+  color: var(--details-button-icon, #ffffff) !important;
+}
+
+@keyframes rightArrowButton {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+/* Nome Prodotto */
+.productName {
+  color: var(--product-name-color) !important;
+}
+
+/* Prezzo */
+.price {
+  color: var(--price-color) !important;
+}
+
+/* Ingredienti */
+.ingredients {
+  color: var(--ingredients-color, #d9d9d9) !important;
+}
+
+/* Card con ombre dinamiche */
+.cardWithShadow {
+  box-shadow: 0 2px 8px rgba(var(--shadow-rgb, 0, 0, 0), var(--shadow-opacity));
+  transition: box-shadow 0.3s ease;
+}
+
+.cardWithShadow:hover {
+  box-shadow: 0 4px 12px rgba(var(--shadow-rgb, 0, 0, 0), var(--hover-shadow-opacity));
+}
+
+/* Border radius dinamico */
+.cardBorderRadius {
+  border-radius: var(--card-border-radius, 12px);
+}

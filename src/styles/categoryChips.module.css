@@ -1,0 +1,45 @@
+.wrap {
+  position: sticky;
+  top: 64px;
+  z-index: 12;
+  margin: 0 -4vw 0.55rem;
+  padding: 0.4rem 4vw 0.55rem;
+  border-bottom: 1px solid rgba(28, 22, 16, 0.08);
+}
+
+.scroller {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding: 0 0 0.15rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex: 0 0 auto;
+  border: 1px solid rgba(28, 22, 16, 0.12);
+  border-radius: 999px;
+  padding: 0.42rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+.chipActive {
+  border-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    display: none;
+  }
+}

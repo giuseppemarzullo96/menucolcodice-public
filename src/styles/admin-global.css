@@ -1,0 +1,51 @@
+/* Stili globali per i Modal della pagina admin */
+/* Questi stili si applicano globalmente quando i modal sono aperti */
+
+.ant-modal {
+  color: #181824 !important;
+}
+
+.ant-modal-content {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+}
+
+.ant-modal-header {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+  border-bottom-color: #E9ECEF !important;
+}
+
+.ant-modal-title {
+  color: #181824 !important;
+  font-weight: 600;
+}
+
+.ant-modal-body {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+}
+
+.ant-modal-footer {
+  background: #FFFFFF !important;
+  border-top-color: #E9ECEF !important;
+}
+
+/* Input e form nei modal */
+.ant-modal .ant-input,
+.ant-modal .ant-input-number,
+.ant-modal textarea,
+.ant-modal .ant-select-selector {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+  border-color: #E9ECEF !important;
+}
+
+.ant-modal .ant-input::placeholder,
+.ant-modal textarea::placeholder {
+  color: #6C757D !important;
+}
+
+.ant-modal .ant-form-item-label > label {
+  color: #181824 !important;
+}

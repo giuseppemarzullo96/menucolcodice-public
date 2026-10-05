@@ -1,0 +1,56 @@
+@media (min-width: 1024px) {
+  .hamburgerMenuIcon {
+    display: none;
+  }
+}
+
+.hamburgerMenuIcon :global(.ant-btn),
+.burgerButton {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+.hamburgerMenuIcon :global(.ant-btn span),
+.burgerButton :global(span) {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebarTitle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.sidebarTitleText {
+  margin: 0 !important;
+  margin-bottom: 1rem !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 600 !important;
+}
+
+.drawerMenu {
+  border-radius: 14px;
+  border: none !important;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}

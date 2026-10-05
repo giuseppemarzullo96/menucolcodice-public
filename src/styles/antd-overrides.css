@@ -1,0 +1,75 @@
+/* Override Ant Design Tag colors */
+.ant-tag {
+  background-color: var(--color-tag, #fcbe00) !important;
+  color: #fff !important;
+  border-color: var(--color-tag, #fcbe00) !important;
+}
+
+.ant-tag a,
+.ant-tag a:hover {
+  color: #fff !important;
+}
+
+/* Override Ant Design Layout background - RIMOSSO: ora gestito da forced-colors.css */
+/* Le regole per .ant-layout e .ant-layout-content sono unificate in forced-colors.css */
+
+/* Override Sidebar background - RIMOSSO: ora gestito da forced-colors.css */
+
+/* Override Card background - RIMOSSO: ora gestito da forced-colors.css */
+
+/* Override Button background for detail buttons */
+button[class*="detailsButton"] {
+  background: var(--card-details-button-global-bg, var(--color-button-bg, #303030)) !important;
+}
+
+/* I bottoni della navbar usano stili specifici da navbar-buttons.css */
+
+/* Stili per i Modal quando usati nella pagina admin */
+/* Questi sovrascrivono il tema scuro globale solo per i modal dell'admin */
+body:has(.adminLayout) .ant-modal {
+  color: #181824 !important;
+}
+
+body:has(.adminLayout) .ant-modal-content {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+}
+
+body:has(.adminLayout) .ant-modal-header {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+  border-bottom-color: #E9ECEF !important;
+}
+
+body:has(.adminLayout) .ant-modal-title {
+  color: #181824 !important;
+  font-weight: 600;
+}
+
+body:has(.adminLayout) .ant-modal-body {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+}
+
+body:has(.adminLayout) .ant-modal-footer {
+  background: #FFFFFF !important;
+  border-top-color: #E9ECEF !important;
+}
+
+body:has(.adminLayout) .ant-modal .ant-input,
+body:has(.adminLayout) .ant-modal .ant-input-number,
+body:has(.adminLayout) .ant-modal textarea,
+body:has(.adminLayout) .ant-modal .ant-select-selector {
+  background: #FFFFFF !important;
+  color: #181824 !important;
+  border-color: #E9ECEF !important;
+}
+
+body:has(.adminLayout) .ant-modal .ant-input::placeholder,
+body:has(.adminLayout) .ant-modal textarea::placeholder {
+  color: #6C757D !important;
+}
+
+body:has(.adminLayout) .ant-modal .ant-form-item-label > label {
+  color: #181824 !important;
+}
