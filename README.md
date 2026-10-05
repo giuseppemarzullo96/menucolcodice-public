@@ -20,7 +20,9 @@ Stack: Next.js 13 (Pages Router) · TypeScript · Ant Design · Tailwind CSS · 
 - [SEO e multi-tenant](#seo-e-multi-tenant)
 - [Stack tecnico](#stack-tecnico)
 - [Struttura del progetto](#struttura-del-progetto)
-- [Deploy](#deploy)
+- [Screenshot](#screenshot)
+- [Avvio in locale](#avvio-in-locale)
+- [Licenza](#licenza)
 
 ---
 
@@ -32,7 +34,7 @@ Nessuna internazionalizzazione: l'app è pensata e scritta per il mercato italia
 
 ## Menu pubblico
 
-- **Due viste commutabili dal cliente**: elenco sobrio o carosello orizzontale, con filtro per categoria.
+- **Due viste**: elenco sobrio o carosello orizzontale, con navigazione per categoria. La vista si sceglie dal pannello admin (Grafica) o da WhatsApp (`elenco`/`carosello`).
 - **Dettaglio piatto**: nome, ingredienti, allergeni (14 allergeni ufficiali UE), badge "consigliato".
 - **Modelli 3D dei piatti** (piano Pro): file `.glb`/`.gltf` mostrati con controlli di rotazione interattivi (Three.js), sia nelle card che nel dettaglio.
 - **Grafica personalizzabile per locale**: logo, sfondo, palette colori, temi pronti.
@@ -122,16 +124,42 @@ src/
   utils/            utility condivise (piani, colori, orari, validazione link)
 tenants/            dati per tenant (menu, tema, info locale) — <slug>/
 platform/           configurazione piattaforma (chiavi, tenant, promo code) — non in git
-docs/               guide di deploy e comandi WhatsApp
+docs/               comandi WhatsApp e screenshot
 ```
 
-## Deploy
+## Screenshot
 
-Deploy automatico su push a `main` via webhook GitHub (vedi [docs/DEPLOY.md](docs/DEPLOY.md)): pull, build, restart PM2.
+Dati di esempio (locale fittizio "Osteria Lume"), app avviata in locale.
+
+| Menu — elenco | Menu — carosello | Dettaglio piatto con allergeni |
+|---|---|---|
+| ![Menu vista elenco, mobile](docs/screenshots/menu-elenco-mobile.png) | ![Menu vista carosello, mobile](docs/screenshots/menu-carosello-mobile.png) | ![Dettaglio piatto, mobile](docs/screenshots/dettaglio-piatto-mobile.png) |
+
+| Pannello admin (mobile) |
+|---|
+| ![Pannello admin, mobile](docs/screenshots/admin-mobile.png) |
+
+**Desktop**
+
+![Menu vista elenco, desktop](docs/screenshots/menu-elenco-desktop.png)
+
+![Home del locale, desktop](docs/screenshots/home-locale-desktop.png)
+
+![Pannello admin, desktop](docs/screenshots/admin-desktop.png)
+
+## Avvio in locale
+
+Requisiti: Node.js 18+.
 
 ```bash
 npm install
-npm run dev      # sviluppo
+npm run dev      # sviluppo su http://localhost:3000
 npm run build    # build di produzione
-npm run deploy   # deploy manuale (pull + build + restart)
+npm run start    # avvia la build
 ```
+
+In locale (`localhost`) viene servito il tenant `demo`, i cui dati stanno in `database/`. I file di configurazione della piattaforma (`platform/*.json`) non sono nel repository: gli esempi sono in `platform/*.example.json`, e `platform/tenants.json` viene creato automaticamente al primo avvio. Le variabili d'ambiente (SMTP ecc.) sono descritte in `.env.example`. Al primo accesso a `/admin` qualunque codice è accettato e può poi essere impostato dalla scheda Sicurezza.
+
+## Licenza
+
+Tutti i diritti riservati — codice pubblicato a scopo di consultazione. Non è concessa alcuna licenza d'uso, copia, modifica o redistribuzione.
