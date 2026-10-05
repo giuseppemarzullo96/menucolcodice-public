@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider, useQuery, useMutation, useQueryClient
 import Head from 'next/head';
 import { Header, Tabs } from '@/components/admin';
 import { Home, ShoppingCart, FolderOpen, Lock, Palette, Camera, Settings, BarChart3, Users, ChartLine, QrCode, CreditCard, Ticket } from 'lucide-react';
-import { GeneralTab, MenuTab, CategoriesTab, ScanMenuTab, SecurityTab, GraficaTab, PlatformTab, OverviewTab, SignupsTab, AnalyticsTab, QrTab, SubscriptionTab, PromoCodesTab } from '@/components/admin/tabs';
+import { GeneralTab, MenuTab, CategoriesTab, ScanMenuTab, SecurityTab, GraficaTab, PlatformTab, OverviewTab, SignupsTab, AnalyticsTab, QrTab, SubscriptionTab, PromoCodesTab } from '@/components/admin/tabs/index';
 import styles from '@/styles/admin.module.css';
 import { planName } from '@/utils/plans';
 
